@@ -8,6 +8,7 @@ import contactsRouter from './routes/contacts';
 import webhooksRouter from './routes/webhooks';
 import analyticsRouter from './routes/analytics';
 import demexRouter from './routes/demex';
+import simulationRouter from './routes/simulation';
 
 const app = express();
 const PORT = process.env.PORT || 3003;
@@ -27,6 +28,7 @@ app.use('/api/contacts', contactsRouter);
 app.use('/api/webhooks', webhooksRouter);
 app.use('/api/analytics', analyticsRouter);
 app.use('/api/demex', demexRouter);
+app.use('/api/simulation', simulationRouter);
 
 // 404
 app.use((_req, res) => {
